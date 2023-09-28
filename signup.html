@@ -24,12 +24,12 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-danger p-2 text-white">
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand heading" href="index.html">PetPalz</a>
+            <a class="navbar-brand heading text-white" href="index.html">PetPalz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -43,12 +43,12 @@
     </nav>
 
     <!--Body-->
-    <div class="bg-danger p-2 text-white">
+    <div class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="container border">
-                        <h1 class="heading">
+                        <h1 class="heading text-center">
                             Sign Up
                         </h1>
                         <form>
@@ -72,14 +72,13 @@
                         <div class="modal-footer justify-content-center">
                             <button type="button" class="btn btn-outline-light" id="liveToastBtn">Sign Up</button>
                         </div>
-                        <hr>
-                        <p class="text-center">Sign up with:</p>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-outline-light mr-2"><i
-                                    class="fa-brands fa-google-play fa-shake fa-sm" style="color: black;"></i>
-                                Google</button>
-                            <button type="button" class="btn btn-outline-light ml-2"><i
-                                    class="fa-brands fa-apple fa-shake" style="color: black;"></i> Apple</button>
+                        <hr class="my-4">
+                        <p class="text-center">or Sign up with</p>
+                        <div class="d-flex justify-content-center mb-3">
+                            <button type="button" class="btn btn-outline-light mr-2">
+                                <i class="fa-brands fa-google-play fa-shake fa-sm col" style="color: white;"></i> Google</button>
+                            <button type="button" class="btn btn-outline-light ml-2">
+                                <i class="fa-brands fa-apple fa-shake" style="color: white;"></i> Apple</button>
                         </div>
                     </div>
                 </div>
@@ -89,6 +88,13 @@
             </div>
         </div>
     </div>
+
+    <footer class="bg-danger">
+        <hr class="my-4">
+          <div class="text-center lead">
+            <p>&copy; 2023 PetPalz. All rights reserved.</p>
+          </div>
+    </footer>
 
     <!--Live Toast-->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
