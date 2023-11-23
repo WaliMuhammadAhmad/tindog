@@ -1,340 +1,547 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PetPalz: HomePage</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PetPalz: HomePage</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image" href="favicon.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image" href="favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nunito:wght@200&family=Rowdies:wght@300&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nunito:wght@200&family=Rowdies:wght@300&family=Ubuntu:wght@300&display=swap"
-    rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <!--Bootstrap v5.2 CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <!--Bootstrap v5.2 CDN-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
-
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-danger">
-    <div class="container-fluid">
-      <a class="navbar-brand heading text-white" href="index.html">PetPalz</a>
-      <!--For Mobile-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal-1"
-              data-bs-whatever="@getbootstrap">Sign in</a>
-          </li>
-          <li class="nav-item">
-            <a href="signup.html">
-              <button type="button" class="btn btn-outline-light">Get Started</button>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!--Sign in Modal-->
-  <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Sign in</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="username" class="col-form-label text-danger">Username</label>
-              <input type="username" class="form-control" id="username">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="col-form-label text-danger">Password</label>
-              <input type="password" class="form-control" id="password">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
-            Sign in
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sign in Confirm Modal -->
-  <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Sign in</h1>
-        </div>
-        <div class="modal-body">
-          You are successfully Signed in!
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Body I: Head-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, #D83F31, #E95C51); height: 100vh;">
-    <div class="contianer-fluid">
-      <div class="container" style="padding: 2em;">
-        <div class="row">
-          <div class="col-lg-6 text-white" style="padding-top: 2.5rem;">
-            <h1 class="display-3">Meet the beautiful dogs near you</h1>
-            <div class="col-lg-6">
-              <p class="lead text-white">Discover a world of canine companionship. Find your perfect furry friend and explore a wide
-                range of dog-related products and services.
-              </p>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-danger">
+      <div class="container-fluid">
+        <a class="navbar-brand heading text-white" href="index.html">PetPalz</a>
+        <!--For Mobile-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal-1"
+                data-bs-whatever="@getbootstrap"
+                >Sign in</a
+              >
+            </li>
+            <li class="nav-item">
               <a href="signup.html">
-                <button type="button" class="btn btn-outline-light">Get Started</button>
+                <button type="button" class="btn btn-outline-light">
+                  Get Started
+                </button>
               </a>
-            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Sign in Modal-->
+    <div
+      class="modal fade"
+      id="exampleModal-1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">
+              Sign in
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="col-lg-6">
-            <img src="icon.png" alt="PetPalz">
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="username" class="col-form-label text-danger"
+                  >Username</label
+                >
+                <input type="username" class="form-control" id="username" />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="col-form-label text-danger"
+                  >Password</label
+                >
+                <input type="password" class="form-control" id="password" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal-2"
+            >
+              Sign in
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--Body II: Dog Family-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, #E95C51, #F89F95); height: 100vh;">
-    <div class="container-fluid">
+    <!-- Sign in Confirm Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal-2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">
+              Sign in
+            </h1>
+          </div>
+          <div class="modal-body">You are successfully Signed in!</div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Body I: Head-->
+    <div
+      class="custom-gradient"
+      style="
+        background-image: linear-gradient(to bottom, #d83f31, #e95c51);
+        height: 100vh;
+      "
+    >
+      <div class="contianer-fluid">
+        <div class="container" style="padding: 2em">
+          <div class="row">
+            <div class="col-lg-6 text-white" style="padding-top: 2.5rem">
+              <h1 class="display-3">Meet the beautiful dogs near you</h1>
+              <div class="row">
+                <div class="col-lg-6">
+                  <p class="lead text-white">
+                    Discover a world of canine companionship. Find your perfect
+                    furry friend and explore a wide range of dog-related
+                    products and services.
+                  </p>
+                  <a href="signup.html">
+                    <button type="button" class="btn btn-outline-light">
+                      Get Started
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="icon.png" alt="PetPalz" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Body II: Dog Family-->
+    <div
+      class="custom-gradient"
+      style="
+        background-image: linear-gradient(to bottom, #e95c51, #f89f95);
+        height: 100vh;
+      "
+    >
+      <div class="container-fluid">
+        <div class="container">
+          <img
+            class="mx-auto d-block"
+            src="https://www.freeiconspng.com/uploads/dog-family-png-11.png"
+            width="70%"
+            height="10%"
+            alt="dog family png"
+          />
+          <h1 class="text-center text-white display-3">
+            Exploring the Canine World
+          </h1>
+          <p class="lead text-center text-white text">
+            At PetPalz, we celebrate the diverse and wonderful world of dogs.
+            From loyal companions to working heroes, dogs come in all shapes,
+            sizes, and breeds. Explore the fascinating history, characteristics,
+            and quirks of these incredible canines.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Body III: Carousel-->
+    <div
+      class="custom-gradient"
+      style="
+        background-image: linear-gradient(to bottom, #f89f95, #ffdad7);
+        height: 90vh;
+      "
+    >
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
+        </div>
+        <!--Carousel Items-->
+        <div class="carousel-inner">
+          <!--Item 0-->
+          <div class="carousel-item active">
+            <div class="d-inline-block" style="width: 200px">
+              <img
+                class="ci"
+                src="shephard.png"
+                class="d-block w-100"
+                alt="Shephard dog"
+              />
+            </div>
+            <div class="carousel-caption d-inline-block">
+              <h5>German Shepherds: The Ultimate Companions</h5>
+              <p>
+                German Shepherds are renowned for their intelligence, loyalty,
+                and versatile nature. With their striking appearance and
+                unwavering devotion, they make the perfect companions for those
+                seeking a loving and protective four-legged friend. Whether as a
+                family pet or a dedicated guardian, the German Shepherd's
+                remarkable qualities shine bright, making them a popular choice
+                among dog lovers.
+              </p>
+            </div>
+          </div>
+          <!--Item 1-->
+          <div class="carousel-item">
+            <img
+              class="ci"
+              src="Retriever.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Retriever: Your Loyal Retrieving Companion</h5>
+              <p>
+                Retrievers are known for their friendly and outgoing nature.
+                They're not only excellent family pets but also skilled
+                retrievers, always eager to fetch and please their owners. With
+                their boundless energy and affectionate personalities,
+                Retrievers are the perfect addition to any home.
+              </p>
+            </div>
+          </div>
+          <!--Item 2-->
+          <div class="carousel-item">
+            <img class="ci" src="Pitbull.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pitbull: The Courageous and Loving Protector</h5>
+              <p>
+                Pitbulls are often misunderstood but possess a deep love for
+                their families. These loyal and brave dogs are known for their
+                protective instincts and affectionate demeanor. With the right
+                training and care, Pitbulls become devoted companions and
+                steadfast guardians.
+              </p>
+            </div>
+          </div>
+          <!--Item 3-->
+          <div class="carousel-item">
+            <img
+              class="ci"
+              src="Dalmatian.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Dalmatian: The Spotted Showstopper</h5>
+              <p>
+                Dalmatians are instantly recognizable with their distinctive
+                spots and elegant appearance. These high-spirited dogs are known
+                for their playful nature and boundless energy. Dalmatians make
+                great companions for active families who can keep up with their
+                spirited antics.
+              </p>
+            </div>
+          </div>
+          <!--Item 4-->
+          <div class="carousel-item">
+            <img class="ci" src="Cordi.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Corgis may be small in size, but they have big personalities.
+                With their short legs and expressive faces, these herding dogs
+                capture hearts wherever they go. Corgis are known for their
+                intelligence and make charming and loving additions to any
+                household.
+              </h5>
+            </div>
+          </div>
+          <!--Item 5-->
+          <div class="carousel-item">
+            <img class="ci" src="Bulldog.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bulldog: The Relaxed and Resilient Friend</h5>
+              <p>
+                Bulldogs are known for their unique appearance and easygoing
+                personalities. They have a calm demeanor and enjoy lounging with
+                their owners. Despite their wrinkled faces, Bulldogs are
+                incredibly affectionate and form strong bonds with their
+                families.
+              </p>
+            </div>
+          </div>
+          <!--Item 6-->
+          <div class="carousel-item">
+            <img class="ci" src="Basset.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Basset: The Ears That Steal Hearts</h5>
+              <p>
+                Basset Hounds are recognized by their long, droopy ears and
+                soulful expressions. Their keen sense of smell makes them
+                skilled trackers, and their gentle nature makes them beloved
+                companions. Bassets are known for their laid-back temperament
+                and make loyal family pets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Carousel Buttons-->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Body Iv: Map-->
+    <div
+      class="custom-gradient"
+      style="
+        background-image: linear-gradient(to bottom, #ffdad7, white);
+        height: 100vh;
+      "
+    >
+      <div class="container-fluid justify-content-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13613.292308651764!2d74.3235535!3d31.460297700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1695490428276!5m2!1sen!2s"
+          width="100%"
+          height="500"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <!--Body V: About-->
+    <div
+      class="custom-gradient"
+      style="
+        background-image: linear-gradient(to bottom, white, #f89f95);
+        height: 90vh;
+      "
+    >
       <div class="container">
-        <img class="mx-auto d-block" src="https://www.freeiconspng.com/uploads/dog-family-png-11.png" width="70%"
-          height="10%" alt="dog family png" />
-        <h1 class="text-center text-white display-3">Exploring the Canine World</h1>
-        <p class="lead text-center text-white text">
-          At PetPalz, we celebrate the diverse and wonderful world of dogs. From loyal companions to working heroes, dogs
-          come in all shapes, sizes, and breeds. Explore the fascinating history, characteristics, and quirks of these
-          incredible canines.
+        <h2 class="text-center display-3">About</h2>
+        <p class="text-center">
+          At PetPalz, we believe that every wagging tail and friendly purr
+          brings joy to our lives. Our passion for pets and commitment to their
+          well-being drive us every day. We are more than just a pet
+          marketplace; we are your trusted companions in the world of
+          four-legged friends. Whether you're looking for the perfect pup to
+          complete your family or seeking top-notch supplies for your cherished
+          pet, PetPalz is your one-stop destination. Our mission is simple: to
+          connect pet lovers with the furry companions of their dreams. We offer
+          a curated selection of the finest breeds, trusted breeders, and
+          top-notch pet products, ensuring that every pet finds a loving home
+          and every owner has access to the best care. Join us on this heartfelt
+          journey as we celebrate the unconditional love, boundless joy, and
+          endless adventures that come with being a pet owner. At PetPalz, we're
+          not just building a marketplace; we're building a community of pet
+          lovers united by their love for all things furry and fantastic.
+          Discover your new best friend, explore a world of pet-related wonders,
+          and embark on a journey filled with love, laughter, and countless tail
+          wags. Welcome to PetPalz, where the magic of pets comes to life. Feel
+          free to use this about section on your website to captivate your
+          audience and convey your passion for pets and your commitment to their
+          well-being.
         </p>
       </div>
     </div>
-  </div>
 
-  <!--Body III: Carousel-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, #F89F95, #FFDAD7); height: 90vh;">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-          aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
-          aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
-          aria-label="Slide 7"></button>
+    <!--Body VI: Footer-->
+    <div
+      class="custom-gradient"
+      style="background-image: linear-gradient(to bottom, #f89f95, #d83f31)"
+    >
+      <div class="container-fluid">
+        <footer class="text-white py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@petpalz.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Pet Street, Cityville, USA</p>
+              </div>
+              <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled text-danger">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="abour">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Products</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>Connect With Us</h5>
+                <a href="#" class="btn btn-outline-light btn-social"
+                  ><i class="bi bi-facebook"></i>Facebook</a
+                >
+                <a href="#" class="btn btn-outline-light btn-social"
+                  ><i class="bi bi-twitter"></i>Twitter</a
+                >
+                <a href="#" class="btn btn-outline-light btn-social"
+                  ><i class="bi bi-linkedin"></i>LinkedIn</a
+                >
+                <a href="#" class="btn btn-outline-light btn-social"
+                  ><i class="bi bi-instagram"></i>Instagram</a
+                >
+              </div>
+            </div>
+            <hr class="my-4" />
+            <!-- Adding a horizontal line for separation -->
+            <div class="text-center lead">
+              <p>&copy; 2023 PetPalz. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
       </div>
-      <!--Carousel Items-->
-      <div class="carousel-inner">
-        <!--Item 0-->
-        <div class="carousel-item active">
-          <img class="ci" src="shephard.png" class="d-block w-100" alt="Shephard dog">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>German Shepherds: The Ultimate Companions</h5>
-            <p>German Shepherds are renowned for their intelligence, loyalty, and versatile nature. With their striking
-              appearance and unwavering devotion, they make the perfect companions for those seeking a loving and
-              protective four-legged friend. Whether as a family pet or a dedicated guardian, the German Shepherd's
-              remarkable qualities shine bright, making them a popular choice among dog lovers.
-            </p>
-          </div>
-        </div>
-        <!--Item 1-->
-        <div class="carousel-item">
-          <img class="ci" src="Retriever.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Retriever: Your Loyal Retrieving Companion</h5>
-            <p>Retrievers are known for their friendly and outgoing nature. They're not only excellent family pets but
-              also skilled retrievers, always eager to fetch and please their owners. With their boundless energy and
-              affectionate personalities, Retrievers are the perfect addition to any home.
-            </p>
-          </div>
-        </div>
-        <!--Item 2-->
-        <div class="carousel-item">
-          <img class="ci" src="Pitbull.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Pitbull: The Courageous and Loving Protector</h5>
-            <p>Pitbulls are often misunderstood but possess a deep love for their families. These loyal and brave dogs
-              are known for their protective instincts and affectionate demeanor. With the right training and care,
-              Pitbulls become devoted companions and steadfast guardians.
-            </p>
-          </div>
-        </div>
-        <!--Item 3-->
-        <div class="carousel-item">
-          <img class="ci" src="Dalmatian.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Dalmatian: The Spotted Showstopper</h5>
-            <p>Dalmatians are instantly recognizable with their distinctive spots and elegant appearance. These
-              high-spirited dogs are known for their playful nature and boundless energy. Dalmatians make great
-              companions for active families who can keep up with their spirited antics.
-            </p>
-          </div>
-        </div>
-        <!--Item 4-->
-        <div class="carousel-item">
-          <img class="ci" src="Cordi.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Corgis may be small in size, but they have big personalities. With their short legs and expressive
-              faces, these herding dogs capture hearts wherever they go. Corgis are known for their intelligence and
-              make charming and loving additions to any household.
-              </p>
-          </div>
-        </div>
-        <!--Item 5-->
-        <div class="carousel-item">
-          <img class="ci" src="Bulldog.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Bulldog: The Relaxed and Resilient Friend</h5>
-            <p>Bulldogs are known for their unique appearance and easygoing personalities. They have a calm demeanor and
-              enjoy lounging with their owners. Despite their wrinkled faces, Bulldogs are incredibly affectionate and
-              form strong bonds with their families.
-            </p>
-          </div>
-        </div>
-        <!--Item 6-->
-        <div class="carousel-item">
-          <img class="ci" src="Basset.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Basset: The Ears That Steal Hearts</h5>
-            <p>Basset Hounds are recognized by their long, droopy ears and soulful expressions. Their keen sense of
-              smell makes them skilled trackers, and their gentle nature makes them beloved companions. Bassets are
-              known for their laid-back temperament and make loyal family pets.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--Carousel Buttons-->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
 
-  <!--Body Iv: Map-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, #FFDAD7, white); height: 100vh;">
-    <div class="container-fluid justify-content-center">
-      <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13613.292308651764!2d74.3235535!3d31.460297700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1695490428276!5m2!1sen!2s"
-      width="100%" height="500" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    </div>
-    
-  </div>
-
-  <!--Body V: About-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, white, #F89F95); height: 90vh;">
-    <div class="container">
-      <h2 class="text-center display-3">About</h2>
-      <p class="text-center">
-        At PetPalz, we believe that every wagging tail and friendly purr brings joy to our lives. Our passion for pets
-        and
-        commitment to their well-being drive us every day.
-        We are more than just a pet marketplace; we are your trusted companions in the world of four-legged friends.
-        Whether you're looking for the perfect pup to complete your family or seeking top-notch supplies for your
-        cherished pet, PetPalz is your one-stop destination.
-        Our mission is simple: to connect pet lovers with the furry companions of their dreams. We offer a curated
-        selection of the finest breeds, trusted breeders, and top-notch pet products, ensuring that every pet finds a
-        loving home and every owner has access to the best care.
-        Join us on this heartfelt journey as we celebrate the unconditional love, boundless joy, and endless adventures
-        that come with being a pet owner. At PetPalz, we're not just building a marketplace; we're building a community
-        of
-        pet lovers united by their love for all things furry and fantastic.
-        Discover your new best friend, explore a world of pet-related wonders, and embark on a journey filled with love,
-        laughter, and countless tail wags. Welcome to PetPalz, where the magic of pets comes to life.
-        Feel free to use this about section on your website to captivate your audience and convey your passion for pets
-        and your commitment to their well-being.
-      </p>
-    </div>
-  </div>
-
-  <!--Body VI: Footer-->
-  <div class="custom-gradient" style="background-image: linear-gradient(to bottom, #F89F95, #D83F31);">
-    <div class="container-fluid">
-      <footer class="text-white py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <h5>Contact Us</h5>
-              <p>Email: info@petpalz.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
-              <p>Address: 123 Pet Street, Cityville, USA</p>
-            </div>
-            <div class="col-md-4">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled text-danger">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="abour">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Products</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h5>Connect With Us</h5>
-              <a href="#" class="btn btn-outline-light btn-social"><i class="bi bi-facebook"></i>Facebook</a>
-              <a href="#" class="btn btn-outline-light btn-social"><i class="bi bi-twitter"></i>Twitter</a>
-              <a href="#" class="btn btn-outline-light btn-social"><i class="bi bi-linkedin"></i>LinkedIn</a>
-              <a href="#" class="btn btn-outline-light btn-social"><i class="bi bi-instagram"></i>Instagram</a>
-            </div>
-          </div>
-          <hr class="my-4"> <!-- Adding a horizontal line for separation -->
-          <div class="text-center lead">
-            <p>&copy; 2023 PetPalz. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
