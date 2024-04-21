@@ -1,16 +1,16 @@
 import React from 'react'
 
-function Description() {
+function Description(props) {
   return (
     <div
     className="custom-gradient"
     style={{
-      backgroundImage: "linear-gradient(to bottom, #E95D52, #f89f95)",
+      backgroundImage: `linear-gradient(to bottom, ${props.topColor}, ${props.topColor})`,
       height: "100vh"
     }}
   >
     <div className="container">
-      <h2 className="text-center display-3">About</h2>
+      <h2 className="text-center display-3">{props.text}</h2>
       <p className="text-center">
         At tindog, we believe that every wagging tail and friendly purr brings
         joy to our lives. Our passion for pets and commitment to their well-being

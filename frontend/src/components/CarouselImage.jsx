@@ -16,7 +16,7 @@ function CarouselImage(props) {
       >
         <h2>{props.name}</h2>
         <p>{props.caption}</p>
-        <Button variant="outline-danger">Get</Button>{" "}
+        <Button variant="outline-light">Read More</Button>{" "}
       </div>
       <img
         src={`${props.img}`}
