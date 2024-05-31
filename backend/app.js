@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 // MongoDB Connection
-const mongoDb = "mongodb://localhost:27017/express-mongo";
+const mongoDb = "mongodb://localhost:27017/tindog";
 mongoose.connect(mongoDb, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
