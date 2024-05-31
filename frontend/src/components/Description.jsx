@@ -5,12 +5,12 @@ function Description(props) {
     <div
     className="custom-gradient"
     style={{
-      backgroundImage: `linear-gradient(to bottom, ${props.topColor}, ${props.topColor})`,
+      backgroundImage: `linear-gradient(to bottom, #E95C51, #F79D93)`,
       height: "100vh"
     }}
   >
     <div className="container">
-      <h2 className="text-center display-3">{props.text}</h2>
+      <h2 className="text-center display-3">WHO WE ARE</h2>
       <p className="text-center">
         At tindog, we believe that every wagging tail and friendly purr brings
         joy to our lives. Our passion for pets and commitment to their well-being

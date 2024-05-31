@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer
       style={{
-        background: "linear-gradient(to top, #d83f31, #f89f95)",
+        background: "linear-gradient(to top, #d83f31, #F79D93)",
         padding: "20px 0",
         textAlign: "center",
       }}

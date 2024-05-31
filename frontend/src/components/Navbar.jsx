@@ -39,10 +39,10 @@ function Topbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1" style={{ color: "#fff" }}>
-                    Home
+                  <Nav.Link href="/about" style={{ color: "#fff" }}>
+                    About
                   </Nav.Link>
-                  <Nav.Link href="#action2" style={{ color: "#fff" }}>
+                  <Nav.Link href="/shop" style={{ color: "#fff" }}>
                     Pricing
                   </Nav.Link>
                 </Nav>
