@@ -11,9 +11,9 @@ const UserSchema = new Schema({
   dob: { type: Date },
   pic: { type: String },
   payment: { type: String, default: 'cash' },
-  cardNumber: { type: Number, default: 0},
-  cardName: { type: String, default: '' },
-  cvv: { type: Number, default: 0 },
+  cardNumber: { type: Number},
+  cardName: { type: String},
+  cvv: { type: Number},
   status: { type: String, enum: ['active', 'inactive', 'banned'], default: 'active' },
 }, {
   timestamps: true,

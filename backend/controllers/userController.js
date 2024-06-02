@@ -1,11 +1,10 @@
 const User = require('../models/user');
 
 // Get all users
-exports.getUsers = async (req, res) => {
+exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
-    if (!user) return res.status(404).json({ message: 'No users in DB' });
-    res.json(users);
+    res.status(200).json(users);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -69,7 +68,7 @@ exports.deleteUser = async (req, res) => {
     const user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
-    await user.remove();
+    await user.deleteOne();
     res.json({ message: 'User deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });
