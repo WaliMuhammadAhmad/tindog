@@ -6,7 +6,7 @@ const DogSchema = new Schema({
     family: {type: String, required: true},
     price: {type: Number, required: true},
     pic : {type: String, required: true, trim: true},
-    status: { type: String, enum: ['avalaible', 'no'], default: 'avaliable' },
+    status: { type: String },
 })
 
 module.exports = mongoose.model('Dog',DogSchema);

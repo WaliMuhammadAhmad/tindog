@@ -1,11 +1,11 @@
-const dog = require('../models/dog');
+const Dog = require('../models/dog');
 
 // Get all dogs
 exports.getdogs = async (req, res) => {
   try {
-    const dogs = await dog.find();
-    if (!dog) return res.status(404).json({ message: 'No dogs in DB' });
-    res.json(dogs);
+    const dogs = await Dog.find();
+    if (!dogs) return res.status(404).json({ message: 'No dogs in DB' });
+    res.status(200).json(dogs);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -14,9 +14,9 @@ exports.getdogs = async (req, res) => {
 // Get a single dog by ID
 exports.getdogById = async (req, res) => {
   try {
-    const dog = await dog.findById(req.params.id);
+    const dog = await Dog.findById(req.params.id);
     if (!dog) return res.status(404).json({ message: 'dog not found' });
-    res.json(dog);
+    res.status(200).json(dog);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -24,7 +24,7 @@ exports.getdogById = async (req, res) => {
 
 // Create a new dog
 exports.createdog = async (req, res) => {
-  const dog = new dog({
+  const dog = new Dog({
     name: req.body.name,
     family: req.body.family,
     price: req.body.price,
@@ -41,7 +41,7 @@ exports.createdog = async (req, res) => {
 // Update a dog
 exports.updatedog = async (req, res) => {
   try {
-    const dog = await dog.findById(req.params.id);
+    const dog = await Dog.findById(req.params.id);
     if (!dog) return res.status(404).json({ message: 'dog not found' });
 
     // Update fields
@@ -61,10 +61,10 @@ exports.updatedog = async (req, res) => {
 // Delete a dog
 exports.deletedog = async (req, res) => {
   try {
-    const dog = await dog.findById(req.params.id);
+    const dog = await Dog.findById(req.params.id);
     if (!dog) return res.status(404).json({ message: 'dog not found' });
 
-    await dog.remove();
+    await dog.deleteOne();
     res.json({ message: 'dog deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });
