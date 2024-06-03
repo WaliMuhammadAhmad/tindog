@@ -1,11 +1,11 @@
-const reviews = require('../models/reviews');
+const Reviews = require('../models/reviews');
 
 // Get all reviewss
 exports.getreviewss = async (req, res) => {
   try {
-    const reviewss = await reviews.find();
+    const reviews = await Reviews.find();
     if (!reviews) return res.status(404).json({ message: 'No reviewss in DB' });
-    res.json(reviewss);
+    res.status(200).json(reviews);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -14,9 +14,9 @@ exports.getreviewss = async (req, res) => {
 // Get a single reviews by ID
 exports.getreviewsById = async (req, res) => {
   try {
-    const reviews = await reviews.findById(req.params.id);
+    const reviews = await Reviews.findById(req.params.id);
     if (!reviews) return res.status(404).json({ message: 'reviews not found' });
-    res.json(reviews);
+    res.status(200).json(reviews);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -24,7 +24,7 @@ exports.getreviewsById = async (req, res) => {
 
 // Create a new reviews
 exports.createreviews = async (req, res) => {
-  const reviews = new reviews({
+  const reviews = new Reviews({
     dogId: req.body.dogId,
     userId: req.body.userId,
     userName: req.body.userName,
@@ -42,7 +42,7 @@ exports.createreviews = async (req, res) => {
 // Update a reviews
 exports.updatereviews = async (req, res) => {
   try {
-    const reviews = await reviews.findById(req.params.id);
+    const reviews = await Reviews.findById(req.params.id);
     if (!reviews) return res.status(404).json({ message: 'reviews not found' });
 
     // Update fields
@@ -53,7 +53,7 @@ exports.updatereviews = async (req, res) => {
     reviews.stars = req.body.stars || reviews.stars;
     
     const updatedreviews = await reviews.save();
-    res.json(updatedreviews);
+    res.status(201).json(updatedreviews);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
@@ -62,10 +62,10 @@ exports.updatereviews = async (req, res) => {
 // Delete a reviews
 exports.deletereviews = async (req, res) => {
   try {
-    const reviews = await reviews.findById(req.params.id);
+    const reviews = await Reviews.findById(req.params.id);
     if (!reviews) return res.status(404).json({ message: 'reviews not found' });
 
-    await reviews.remove();
+    await reviews.deleteOne();
     res.json({ message: 'reviews deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });
