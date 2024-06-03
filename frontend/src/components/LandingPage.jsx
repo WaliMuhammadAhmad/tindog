@@ -14,7 +14,7 @@ function LandingPage() {
     <div className="container" style={{ padding: "2em" }}>
       <div className="row">
         <div className="col-lg-6 " style={{ paddingTop: "2.5rem" }}>
-          <h1 className="display-3">Meet the beautiful dogs near you</h1>
+          <h1 className="display-3">The magic of pets comes to life.</h1>
           <div className="row">
             <div className="col-lg-6">
               <p className="lead ">

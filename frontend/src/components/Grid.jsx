@@ -61,7 +61,8 @@ function Grid() {
   ];
 
   return (
-    <div style={{ backgroundColor: "#f89f95", padding: "20px" }}>
+    <div className="container" style={{ padding: "2em" }}>
+      {/* add filters here */}
       <div className="row">
         {gridData.map((item) => (
           <div
