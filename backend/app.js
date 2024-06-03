@@ -5,7 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require("mongoose");
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user');
+var adminRouter = require('./routes/admin');
+var dogRouter = require('./routes/dog');
+var reviewRouter = require('./routes/review');
 
 var app = express();
 // MongoDB Connection
@@ -26,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
+app.use('/dogs', dogRouter);
+app.use('/reviews', reviewRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
