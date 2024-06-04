@@ -4,6 +4,7 @@ import Topbar from "../components/Navbar";
 import Carousl from "../components/Carousel";
 import Info from "../components/Info";
 import Description from "../components/Description";
+import Map from "../components/Map";
 import Footer from "../components/Footer";
 
 const description = {
@@ -21,6 +22,7 @@ function Home() {
       <LandingPage />
       <Info />
       <Carousl />
+      <Map />
       <Description {...description} />
       <Footer />
     </div>
