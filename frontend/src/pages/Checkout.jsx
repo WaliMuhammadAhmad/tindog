@@ -15,8 +15,7 @@ function Checkout() {
         justifyContent: "center",
         gap : "2em",
       }}>
-        <Check text = "credientials" />
-        <Check text = "credientials" />
+        <Check />
       </div>
     </div>
   )
