@@ -46,7 +46,7 @@ function Topbar() {
                     Pricing
                   </Nav.Link>
                 </Nav>
-                <Button variant="outline-light">Sign up</Button>
+                <Button href="/signup" variant="outline-light">Sign up</Button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

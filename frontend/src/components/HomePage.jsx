@@ -50,7 +50,7 @@ function HomePage(props) {
         className="custom-gradient"
         style={{
           backgroundImage: "linear-gradient(to top, #d83f31, #e95c51)",
-          height: "70vh",
+          height: "50vh",
           paddingTop: "3rem",
         }}
       >

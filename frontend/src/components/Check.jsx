@@ -37,8 +37,11 @@ function Check() {
   };
 
   return (
-    <Container>
-      <h1 className="text-center my-4">Checkout</h1>
+    <div style={{
+      backgroundImage: "linear-gradient(to bottom, #D83F31, #F89F95)",
+      color: "white",
+    }}>
+      <Container>
       <Row>
         <Col md={8}>
           <h3>Items</h3>
@@ -87,21 +90,22 @@ function Check() {
                 <td>${totals.discount.toFixed(2)}</td>
               </tr>
               <tr>
-                <td>Taxes</td>
+                <td>18% Taxes</td>
                 <td>${totals.tax.toFixed(2)}</td>
               </tr>
               <tr>
-                <td>Total today</td>
+                <td>Grand Total</td>
                 <td>${totals.total.toFixed(2)}</td>
               </tr>
             </tbody>
           </Table>
-          <Button variant="primary" size="lg" block>
+          <Button variant="danger" size="lg" block>
             Proceed to Payment
           </Button>
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 
