@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //Pages
 import Home from "./pages/Home";
@@ -9,11 +13,8 @@ import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
 import Details from "./pages/Details";
 import UserPanel from "./pages/UserPanel";
-
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,16 @@ const router = createBrowserRouter([
   {
     path:'/about',
     element: <About />,
+    errorElement: <div>404 Not Found</div>,
+  },
+  {
+    path:'/signin',
+    element: <SignIn />,
+    errorElement: <div>404 Not Found</div>,
+  },
+  {
+    path:'/signup',
+    element: <SignUp />,
     errorElement: <div>404 Not Found</div>,
   },
   {
