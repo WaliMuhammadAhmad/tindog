@@ -69,7 +69,9 @@ function SignUp() {
             <button type="submit" className="btn btn-danger">
               Submit
             </button>
-            <Button href="/signin">Sign in</Button>
+            <Button href="/signin" variant="btn" className="ms-3">
+              Already have an account? Sign In
+            </Button>
           </form>
         </div>
       </Container>

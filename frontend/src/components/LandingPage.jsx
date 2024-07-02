@@ -22,7 +22,7 @@ function LandingPage() {
                 furry friend and explore a wide range of dog-related products
                 and services.
               </p>
-              <a href="signup.html">
+              <a href="signup">
                 <button type="button" className="btn btn-outline-light">
                   Get Started
                 </button>
